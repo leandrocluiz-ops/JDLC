@@ -1,0 +1,75 @@
+/* Admin — reaproveita tokens de style.css */
+body.admin-body { background: var(--off-white); }
+
+.admin-header {
+  background: var(--navy-deep); color: var(--white);
+  padding: 18px 0; position: sticky; top: 0; z-index: 50;
+}
+.admin-header .container { display: flex; align-items: center; justify-content: space-between; }
+.admin-header .brand-name { font-family: var(--font-display); font-size: 1.3rem; }
+.admin-header a.back { font-family: var(--font-mono); font-size: 0.78rem; opacity: 0.8; text-decoration: none; }
+.admin-header a.back:hover { color: var(--yellow); opacity: 1; }
+
+.gate-wrap {
+  min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 40px 24px;
+}
+.gate-card {
+  background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: 40px 36px; max-width: 380px; width: 100%; text-align: center;
+}
+.gate-card img { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px; }
+.gate-card h2 { font-size: 1.6rem; margin-bottom: 6px; }
+.gate-card p { color: var(--asphalt); font-size: 0.88rem; margin-bottom: 20px; }
+.gate-card input { width: 100%; padding: 12px 14px; border-radius: 6px; border: 1px solid rgba(27,58,92,0.2); margin-bottom: 14px; font-family: var(--font-body); }
+.gate-error { color: #c0392b; font-family: var(--font-mono); font-size: 0.78rem; margin-top: 10px; min-height: 16px; }
+
+.admin-main { padding: 40px 0 100px; }
+.admin-tabs { display: flex; gap: 10px; margin-bottom: 28px; }
+.admin-tabs button {
+  font-family: var(--font-mono); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.04em;
+  padding: 10px 20px; border-radius: 20px; border: 1px solid rgba(27,58,92,0.25);
+  background: var(--white); cursor: pointer; font-weight: 600; color: var(--navy-base);
+}
+.admin-tabs button.active { background: var(--navy-deep); color: var(--yellow); border-color: var(--navy-deep); }
+
+.admin-panel { display: none; }
+.admin-panel.active { display: block; }
+
+.admin-card {
+  background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: 26px 28px; margin-bottom: 22px; border: 1px solid rgba(27,58,92,0.08);
+}
+.admin-card h3 { font-size: 1.15rem; margin-bottom: 16px; color: var(--navy-deep); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-row.full { grid-template-columns: 1fr; }
+.admin-card label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--asphalt); display: block; margin-bottom: 5px; }
+.admin-card input[type=text], .admin-card input[type=url], .admin-card select, .admin-card textarea {
+  width: 100%; padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(27,58,92,0.2); font-family: var(--font-body); font-size: 0.92rem;
+}
+.admin-card textarea { min-height: 70px; resize: vertical; }
+.help-text { font-size: 0.78rem; color: var(--asphalt); opacity: 0.75; margin-top: -8px; margin-bottom: 14px; }
+
+.item-list { display: flex; flex-direction: column; gap: 10px; }
+.item-row {
+  display: flex; align-items: center; gap: 14px; padding: 10px; border: 1px solid rgba(27,58,92,0.12); border-radius: 8px;
+}
+.item-row .thumb { width: 60px; height: 46px; border-radius: 6px; object-fit: cover; background: var(--asphalt); flex-shrink: 0; }
+.item-row .info { flex: 1; min-width: 0; }
+.item-row .info strong { display: block; font-size: 0.9rem; }
+.item-row .info span { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--asphalt); opacity: 0.7; word-break: break-all; }
+.item-row .actions { display: flex; gap: 6px; flex-shrink: 0; }
+.icon-btn {
+  border: 1px solid rgba(27,58,92,0.2); background: var(--white); border-radius: 6px; width: 32px; height: 32px;
+  cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center;
+}
+.icon-btn.danger { border-color: #c0392b; color: #c0392b; }
+.icon-btn:hover { background: var(--off-white); }
+
+.code-out {
+  width: 100%; min-height: 220px; font-family: var(--font-mono); font-size: 0.78rem;
+  background: var(--navy-deep); color: #d8f0ff; padding: 16px; border-radius: 8px; border: none; white-space: pre; overflow: auto;
+}
+.publish-steps { list-style: decimal; padding-left: 20px; font-size: 0.9rem; color: var(--asphalt); }
+.publish-steps li { margin-bottom: 6px; }
+.status-msg { font-family: var(--font-mono); font-size: 0.8rem; color: #1a7a3c; min-height: 18px; }
