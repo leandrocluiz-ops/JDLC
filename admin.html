@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área Administrativa | JDLC Sinalização Viária</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="container">
+    <span class="brand-name">JDLC · Painel Administrativo</span>
+    <a class="back" href="index.html">← Voltar para o site</a>
+  </div>
+</header>
+
+<!-- TELA DE SENHA -->
+<div class="gate-wrap" id="gateWrap">
+  <div class="gate-card">
+    <img src="assets/logo.jpg" alt="Logo JDLC">
+    <h2>Acesso restrito</h2>
+    <p>Digite a senha para editar as imagens e vídeos do site.</p>
+    <input type="password" id="gatePassword" placeholder="Senha">
+    <button class="btn btn-primary" id="gateEnter" style="width:100%; justify-content:center;">Entrar</button>
+    <div class="gate-error" id="gateError"></div>
+  </div>
+</div>
+
+<!-- PAINEL -->
+<main class="admin-main container" id="adminPanel" style="display:none;">
+
+  <div class="admin-card" style="background:var(--navy-deep); color:#fff;">
+    <h3 style="color:var(--yellow);">Como funciona</h3>
+    <p style="font-size:0.9rem; opacity:0.85; margin:0;">
+      Este site é 100% estático (sem servidor), então as alterações que você fizer aqui
+      aparecem <strong>só no seu navegador</strong>, como pré-visualização. Para que todo mundo
+      veja as mudanças no site publicado, clique em <strong>"Gerar código para publicar"</strong>,
+      copie o resultado e cole no arquivo <code>js/config.js</code> antes de subir para o GitHub/Hostinger —
+      o mesmo processo que você já usa no site do MasQbom.
+    </p>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="active" data-tab="carrossel">Carrossel</button>
+    <button data-tab="galeria">Galeria (fotos e vídeos)</button>
+    <button data-tab="publicar">Gerar código para publicar</button>
+  </div>
+
+  <!-- CARROSSEL -->
+  <section class="admin-panel active" id="panel-carrossel">
+    <div class="admin-card">
+      <h3>Adicionar imagem ao carrossel</h3>
+      <div class="form-row full">
+        <div>
+          <label>Imagem</label>
+          <input type="file" id="carrosselFile" accept="image/*">
+          <p class="help-text">Ou, em vez de enviar um arquivo, cole abaixo o endereço (URL) de uma imagem já publicada:</p>
+          <input type="url" id="carrosselUrl" placeholder="https://... (opcional, se não for enviar arquivo)">
+        </div>
+      </div>
+      <div class="form-row full">
+        <div>
+          <label>Legenda (aparece sobre a imagem)</label>
+          <input type="text" id="carrosselLegenda" placeholder="Ex: Sinalização horizontal em rodovias">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="carrosselAdd">+ Adicionar ao carrossel</button>
+      <p class="status-msg" id="carrosselStatus"></p>
+    </div>
+
+    <div class="admin-card">
+      <h3>Itens no carrossel</h3>
+      <div class="item-list" id="carrosselList"></div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="admin-panel" id="panel-galeria">
+    <div class="admin-card">
+      <h3>Adicionar foto ou vídeo à galeria</h3>
+      <div class="form-row">
+        <div>
+          <label>Tipo</label>
+          <select id="galeriaTipo">
+            <option value="imagem">Foto</option>
+            <option value="video">Vídeo</option>
+          </select>
+        </div>
+        <div>
+          <label>Título</label>
+          <input type="text" id="galeriaTitulo" placeholder="Ex: Repintura de faixa — Centro">
+        </div>
+      </div>
+      <div class="form-row full">
+        <div>
+          <label>Arquivo (foto ou vídeo pequeno)</label>
+          <input type="file" id="galeriaFile" accept="image/*,video/*">
+          <p class="help-text">Para vídeos, o ideal é colar abaixo o link do YouTube (não listado, se preferir privacidade) — fica mais leve que enviar o arquivo direto.</p>
+          <input type="url" id="galeriaUrl" placeholder="https://www.youtube.com/embed/SEU_VIDEO ou link da imagem">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="galeriaAdd">+ Adicionar à galeria</button>
+      <p class="status-msg" id="galeriaStatus"></p>
+    </div>
+
+    <div class="admin-card">
+      <h3>Itens na galeria</h3>
+      <div class="item-list" id="galeriaList"></div>
+    </div>
+  </section>
+
+  <!-- PUBLICAR -->
+  <section class="admin-panel" id="panel-publicar">
+    <div class="admin-card">
+      <h3>Publicar as alterações no site de verdade</h3>
+      <ol class="publish-steps">
+        <li>Clique em "Gerar código" abaixo.</li>
+        <li>Copie todo o texto gerado.</li>
+        <li>Abra o arquivo <code>js/config.js</code> no seu computador (ou no GitHub).</li>
+        <li>Substitua os trechos <code>carrossel: [...]</code> e <code>galeria: [...]</code> pelo código copiado.</li>
+        <li>Salve e suba os arquivos para a Hostinger/GitHub, como de costume.</li>
+      </ol>
+      <button class="btn btn-primary" id="generateCode">Gerar código</button>
+      <textarea class="code-out" id="codeOut" readonly placeholder="O código gerado vai aparecer aqui..."></textarea>
+      <p class="help-text">Dica: itens adicionados por upload de arquivo viram um código bem longo (imagem embutida). Isso funciona, mas deixa o site mais pesado — prefira colar um link de imagem/vídeo já hospedado sempre que possível.</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

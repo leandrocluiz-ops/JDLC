@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JDLC Sinalização Viária | Segurança e sinalização para vias e rodovias</title>
+<meta name="description" content="JDLC Sinalização Viária: pintura de faixas, placas, dispositivos de segurança e projetos de sinalização viária. Solicite um orçamento.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <a href="#topo" class="brand">
+      <img src="assets/logo.jpg" alt="Logo JDLC Sinalização Viária">
+      <span>
+        <span class="brand-name">JDLC</span><br>
+        <span class="brand-sub">SINALIZAÇÃO VIÁRIA</span>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#servicos">Conheça nossos serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#orcamento" class="nav-cta">Solicite um orçamento</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="route-line" aria-hidden="true"></div>
+
+<!-- CARROSSEL -->
+<div class="carousel" id="carousel">
+  <div class="carousel-track" id="carouselTrack"></div>
+  <button class="carousel-arrow prev" id="prevSlide" aria-label="Slide anterior">&#8249;</button>
+  <button class="carousel-arrow next" id="nextSlide" aria-label="Próximo slide">&#8250;</button>
+  <div class="carousel-dots" id="carouselDots"></div>
+</div>
+
+<main id="topo">
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Conheça nossos serviços</h2>
+        <p>Soluções completas em sinalização viária horizontal e vertical, do projeto técnico à execução em campo, seguindo as normas do CONTRAN e do DNIT.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE DESTAQUE -->
+  <div class="strip">
+    <div class="container strip-grid">
+      <div><strong>+500</strong><span>Km sinalizados</span></div>
+      <div><strong>+300</strong><span>Placas instaladas</span></div>
+      <div><strong>100%</strong><span>Normas CONTRAN/DNIT</span></div>
+      <div><strong>24h</strong><span>Atendimento a emergências</span></div>
+    </div>
+  </div>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nossos trabalhos</span>
+        <h2>Galeria de projetos</h2>
+        <p>Fotos e vídeos de serviços já realizados em rodovias, vias urbanas, condomínios e áreas industriais.</p>
+      </div>
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="imagem">Fotos</button>
+        <button class="filter-btn" data-filter="video">Vídeos</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ORÇAMENTO -->
+  <section id="orcamento" class="quote-section">
+    <div class="container quote-grid">
+      <div>
+        <span class="eyebrow">Fale com a gente</span>
+        <div class="section-head">
+          <h2>Solicite um orçamento</h2>
+          <p>Conte um pouco sobre o serviço que você precisa. Retornamos o mais rápido possível pelo WhatsApp ou e-mail.</p>
+        </div>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+      <form class="quote-form" id="quoteForm">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div>
+          <label for="cidade">Cidade / Local do serviço</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Cidade, bairro ou trecho da via">
+        </div>
+        <div>
+          <label for="servico">Tipo de serviço</label>
+          <select id="servico" name="servico">
+            <option>Sinalização Horizontal</option>
+            <option>Sinalização Vertical</option>
+            <option>Dispositivos de Segurança</option>
+            <option>Projetos e Laudos</option>
+            <option>Manutenção Viária</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensagem">Descreva o serviço</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Ex: repintura de faixa de pedestre em via de 200m..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>&copy; <span id="year"></span> JDLC Sinalização Viária. Todos os direitos reservados.</span>
+    <a href="admin.html">Área administrativa</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
