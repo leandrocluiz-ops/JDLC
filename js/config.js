@@ -17,8 +17,8 @@ const SITE_CONFIG = {
   // ---- CONTATO -----------------------------------------------------------
   contato: {
     nomeEmpresa: "JDLC Sinalização Viária",
-    whatsapp: "5535000000000",     // troque pelo número real, só números, com DDI 55 + DDD
-    whatsappExibicao: "(35) 00000-0000",
+    whatsapp: "5511953721545",     // troque pelo número real, só números, com DDI 55 + DDD
+    whatsappExibicao: "(11) 95372-1545",
     email: "contato@jdlcsinalizacao.com.br",
     endereco: "Sul de Minas, MG",
     instagram: "https://instagram.com/jdlcsinalizacao"
@@ -96,7 +96,7 @@ const SITE_CONFIG = {
     },
     {
       tipo: "video",
-      arquivo: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      arquivo: "assets/Video.mp4",
       titulo: "Time-lapse: pintura de zebrado"
     }
   ]

@@ -167,7 +167,7 @@ section { padding: 84px 0; }
   background: var(--white);
   border-radius: var(--radius);
   padding: 30px 26px;
-  border: 1px solid rgba(27,58,92,0.1);
+  border: 1px solid rgba(27, 58, 92, 0.1);
   border-top: 4px solid var(--yellow);
   box-shadow: var(--shadow-lg);
   transition: transform 0.2s ease;
@@ -255,6 +255,7 @@ form.quote-form { display: flex; flex-direction: column; gap: 14px; }
   width: 100%; padding: 12px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.25);
   background: rgba(255,255,255,0.06); color: var(--white); font-family: var(--font-body); font-size: 0.95rem;
 }
+.quote-form select option { background: var(--navy-deep); color: var(--white); }
 .quote-form input::placeholder, .quote-form textarea::placeholder { color: rgba(255,255,255,0.4); }
 .quote-form textarea { resize: vertical; min-height: 100px; }
 .quote-form input:focus, .quote-form textarea:focus, .quote-form select:focus { outline: 2px solid var(--yellow); border-color: transparent; }
