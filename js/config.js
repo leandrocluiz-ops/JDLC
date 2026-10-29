@@ -17,8 +17,8 @@ const SITE_CONFIG = {
   // ---- CONTATO -----------------------------------------------------------
   contato: {
     nomeEmpresa: "JDLC Sinalização Viária",
-    whatsapp: "5511953721545",     // troque pelo número real, só números, com DDI 55 + DDD
-    whatsappExibicao: "(11) 95372-1545",
+    whatsapp: "553599833456",     // troque pelo número real, só números, com DDI 55 + DDD
+    whatsappExibicao: "(35) 99983-3456",
     email: "contato@jdlcsinalizacao.com.br",
     endereco: "Sul de Minas, MG",
     instagram: "https://instagram.com/jdlcsinalizacao"
