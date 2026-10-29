@@ -40,7 +40,7 @@ const SITE_CONFIG = {
       legenda: "Projetos completos de segurança viária"
     },
     {
-      imagem: "assets/carrossel-2.jpg",
+      imagem: "assets/carrossel-4.jpg",
       legenda: "Teste para novas imagens"
     }
      
