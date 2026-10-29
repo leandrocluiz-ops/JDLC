@@ -38,7 +38,12 @@ const SITE_CONFIG = {
     {
       imagem: "assets/carrossel-3.jpg",
       legenda: "Projetos completos de segurança viária"
+    },
+    {
+      imagem: "assets/carrossel-2.jpg",
+      legenda: "Teste para novas imagens"
     }
+     
   ],
 
   // ---- SERVIÇOS -----------------------------------------------------------
